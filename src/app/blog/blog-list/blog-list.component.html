@@ -1,0 +1,31 @@
+  <div class="row" *ngFor="let post of posts | paginate: { itemsPerPage: 5, currentPage: p, totalItems: total }">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <div class="card">
+        <div class="card-img">
+          <img src="{{ post.image }}">
+        </div>
+        <div class="card-block">
+          <h2 class="card-title">
+            {{ post.title }}
+          </h2>
+          <p class="card-text">
+            {{ post.content }}
+          </p>
+        </div>
+        <div class="card-footer">
+          <span class="card-media-title">Tags: <span class="label" *ngFor="let tag of post.tags"> {{ tag }}</span></span>
+        </div>
+        <div class="card-footer">
+          <div class="card-media-block">
+            <img src="{{ post.author.avatar }}" class="card-media-image">
+            <div class="card-media-description">
+              <span class="card-media-title">{{ post.author.name }}</span>
+              <span class="card-media-text">Posted: {{ post.createdDate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
