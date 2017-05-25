@@ -1,5 +1,9 @@
 # Blog
 
+Blog data is using JSON-SERVER for api data. users.js is a script used to create the data. Once front end is completed then I will switch to Express / Mongo. 
+
+Run `json-server users.js` to start the database before starting ng serve. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## Development server
